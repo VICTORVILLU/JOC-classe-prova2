@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr2xelf17rjeh"]
+
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_3pfld"]
+[ext_resource type="Texture2D" uid="uid://b855fjwt0vexp" path="res://IMATGES/ship.png" id="2_atqk3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wf7w"]
+size = Vector2(16, 14)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_3pfld")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_atqk3")
+region_enabled = true
+region_rect = Rect2(15.6143, 0, 16.8874, 15.8144)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6wf7w")
